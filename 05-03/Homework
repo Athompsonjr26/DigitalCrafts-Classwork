@@ -1,0 +1,3 @@
+var num = "this is a string";
+var num2 = num.toUpperCase();
+console.log(num2);

@@ -1,0 +1,35 @@
+
+
+#header {
+  top:0;
+  left:50%;
+  width: 25%;
+  heigth: 100%;
+  background-color: blue;
+
+}
+#leftnav {
+top:0;
+left: 25%
+width:25%;
+height:100%;
+background-color: yellow;
+}
+
+#rightnav {
+float: right;
+width: 25%;
+height: 100%;
+background-color: red;
+clear: both;
+}
+
+#body{
+  background-color: purple;
+  margin: auto
+}
+
+#footer{
+  background-color: orange;
+  height: 200px;
+}

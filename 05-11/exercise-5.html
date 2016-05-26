@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Exercise</title>
+    <script src="jquery.js"></script>
+    <script>
+    /*
+    Make it so that after entering the task description, in the text field and clicking the "Add Task" button, a new task appears inside the element with the id todo-list.
+
+    If you are done early, try to make this into a full-fledged todo list. Some features you can implement are:
+
+    1. the ability to remove tasks (add an x button)
+    2. the ability to check off tasks - strikes them out wo removing (add a checkbox)
+
+    */
+    </script>
+    <style>
+    #wrapper {
+      max-width: 480px;
+      margin: auto;
+    }
+
+    #description, #search, #todo-list {
+      font-size: 1.5em;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <input id="description" type="text" name="description">
+      <button id="add-button">Add Task</button>
+      <ul id="todo-list">
+        <li>Feed the cat</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<!--
+Steps:
+1. Wait for document to be ready: $(function() { ... });
+  2. Add a click event handler for the "Add Task" button #add-button
+    3. Get the value using .val() method from the text input #description and store it in a variable, say `description`
+    4. Append a new li element to the todo list #todo-list using .append('<li>' + descripton + '</li>')
+
+Methods Needed:
+
+* http://api.jquery.com/jQuery/
+* http://api.jquery.com/val/
+* http://api.jquery.com/click/
+* http://api.jquery.com/ready/
+* http://api.jquery.com/append/
+* http://api.jquery.com/val/
+-->

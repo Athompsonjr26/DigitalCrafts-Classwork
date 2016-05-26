@@ -1,0 +1,55 @@
+body {
+  text-align: center;
+  padding:0;
+  margin: 0;
+  background: black;
+
+}
+.board{
+  background: white;
+  background-color: yellowgreen;
+
+}
+#column{
+  width: 480px;
+  margin:0 auto;
+  background: blue;
+}
+#messages{
+  font-size: 2em;
+  background: purple;
+  color: white;
+}
+table.board{
+  width: 100%;
+  border: 1px;
+}
+button.box{
+  width:150px;
+  height:150px;
+  font-size: 5em;
+  border: 1px solid black;
+  color: white;
+}
+button.box:disabled{
+  color:black;
+}
+
+#youwon{
+  font-size: 3em;
+  background-color: pink;
+  color: black;
+}
+#play-again-button{
+  font-size: 2em;
+  border-radius: 5px;
+  padding:5px;
+}
+#scoreboard{
+  height:60px;
+  background-color: yellowgreen;
+}
+h1 {
+  text-align: center;
+  color: black;
+}

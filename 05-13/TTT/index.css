@@ -1,0 +1,30 @@
+body {
+  font-family: Helvetica, "Sans Serif";
+  text-align: center;
+}
+
+#column {
+  width: 480px;
+  margin: 0 auto;
+}
+
+#message-panel {
+  font-size: 2em;
+  background: yellow;
+}
+
+table.board {
+  width: 100%;
+}
+
+button.square {
+  width: 150px;
+  height: 150px;
+  font-size: 6em;
+  background-color: #eee;
+  border: 1px solid black;
+}
+
+button.square:disabled {
+  color: black;
+}

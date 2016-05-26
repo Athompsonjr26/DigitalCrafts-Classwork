@@ -1,0 +1,160 @@
+var string = "Hello everyone";
+var letterCounts = {
+  a: 0,
+  b: 0,
+  c: 0,
+  d: 0,
+  e: 0,
+  f: 0,
+  g: 0,
+  h: 0,
+  i: 0,
+  j: 0,
+  k: 0,
+  l: 0,
+  m: 0,
+  n: 0,
+  o: 0,
+  p: 0,
+  q: 0,
+  r: 0,
+  s: 0,
+  t: 0,
+  u: 0,
+  v: 0,
+  w: 0,
+  x: 0,
+  y: 0,
+  z: 0
+};
+for (var i = 0; i < string.length; i++) {
+var char = string.charAt(i).toLowerCase();
+letterCounts[char] = letterCounts[char] + 1;
+}
+console.log(char);
+
+////////////next///////////
+
+var players = [
+  {
+    name: 'Paul Millsap',
+    position: 'PF',
+    avgMinutesPlayed: 36,
+    avgPoints: 16.4,
+    avgRebounds: 9.4,
+    starter: true
+  },
+  {
+    name: 'Jeff Teague',
+    position: 'PG',
+    avgMinutesPlayed: 28.6,
+    avgPoints: 15.6,
+    avgRebounds: 1.9,
+    starter: true
+  },
+  {
+    name: 'Al Horford',
+    position: 'C',
+    avgMinutesPlayed: 32,
+    avgPoints: 13.2,
+    avgRebounds: 6.8,
+    starter: true
+  },
+  {
+    name: 'Kent Bazemore',
+    position: 'SF',
+    avgMinutesPlayed: 31.8,
+    avgPoints: 12,
+    avgRebounds: 6.6,
+    starter: true
+  },
+  {
+    name: 'Kyle Korver',
+    position: 'SG',
+    avgMinutesPlayed: 32.4,
+    avgPoints: 11.2,
+    avgRebounds: 4.9,
+    starter: true
+  },
+  {
+    name: 'Dennis Schroder',
+    position: 'PG',
+    avgMinutesPlayed: 18.3,
+    avgPoints: 10.7,
+    avgRebounds: 1.8,
+    starter: false
+  },
+  {
+    name: 'Kris Humphries',
+    position: 'PF',
+    avgMinutesPlayed: 14.7,
+    avgPoints: 9.7,
+    avgRebounds: 5.7,
+    starter: false
+  },
+  {
+    name: 'Mike Scott',
+    position: 'PF',
+    avgMinutesPlayed: 17.6,
+    avgPoints: 7.0,
+    avgRebounds: 3.6,
+    starter: false
+  },
+  {
+    name: 'Thabo Sefolosha',
+    position: 'SF',
+    avgMinutesPlayed: 18.9,
+    avgPoints: 4.8,
+    avgRebounds: 3.9,
+    starter: false
+  },
+  {
+    name: 'Mike Muscala',
+    position: 'PF',
+    avgMinutesPlayed: 7.4,
+    avgPoints: 2.7,
+    avgRebounds: 1.9,
+    starter: false
+  },
+
+];
+//////this prints ALL the avgMinutesPlayed///////
+
+for(var i=0; i < players.length; i++) {
+  var player = players[i];
+
+console.log(player.avgMinutesPlayed);
+}
+
+////////////////This prints the average total////////////////////////
+
+var total = 0;
+for(var i=0; i < players.length; i++) {
+  var player = players[i];
+  console.log(player.avgMinutesPlayed);
+  total = total + player.avgMinutesPlayed;
+}
+var avg = total / players.length;
+console.log(avg);
+
+//////////average playing time of the starters////////
+
+var total = 0;
+for(var i=0; i < players.length; i++) {
+  var player = players[i];
+  while(player.starter === true);
+  total = total + player.avgMinutesPlayed;
+}
+var avg = total / players.length;
+console.log(avg);
+
+/////////////////avg playing time of the benched players/////////
+
+var total = 0;
+for(var i=0; i < players.length; i++) {
+  var player = players[i];
+  while(player.starter === false);
+  total = total + player.avgMinutesPlayed;
+}
+var avg = total / players.length;
+console.log(avg);

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+
+    $.ajax({
+      method: 'GET',
+      url: 'https://api.github.com/users/athompsonjr26/events',
+      headers: {
+        "Authorization": "Basic YWlycG9ydHloOmZ1enp5bG9naWM="
+      },
+      success: function(data) {
+        console.log(data);
+        for (var i = 0;i < data.length; i++){
+          var event = data[i];
+
+        console.log(event.type + '' + event.created_at);
+        if (event.type === 'MemberEvent'){
+          var memberName = event.payload.memeber.login;
+          console.log('Added member' + memberName);
+        };
+        };
+      }
+      if (event.type === 'CreateEvent'){
+        cobsole.log('created' + event.repo.name);
+      }
+      if (event.type === 'pushEvent'){
+        console.log('Push changes to ' + event.repo.name);
+        var commits = event.payload.commits;
+        commits.forEach(function(commit) {
+          console.log(' ' + commit.sha + ': ' + commit.message);
+        });
+
+        }
+
+
+    });
+    </script>
+
+  </body>
+</html>
